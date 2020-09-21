@@ -28,9 +28,9 @@ async function startPlayer() {
   let guessCount = 7; // Number of Guesses atempt
   let randomNum = Math.floor(Math.random() * maxNum) + 1; // Generates random number
 
-  console.log("I'm thinking of a number from 1-100!");
-  while (guessCount <= 0) {
+  while (true) {
     //Ate count = 0 do the following.
+    console.log("I'm thinking of a number from 1-100!");
     let guess = parseInt(await ask("What am i thinking?\n"));
     if (guess < 1 || guess > 100) {
       console.log("Please chose a number between 1 - 100!");
